@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Navbar.css">
+    <style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  h1 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;}
+  .about{
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(18px);
+    width: fit-content;
+    height: fit-content;
+    /* height: 500px; */
+    margin: auto;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+  .about img{
+    height: 554.5px;
+    width: 450px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 10px 10px lightcoral, 20px 20px lightblue;
+
+  }
+  .about-text{
+    width: 550px;
+  }
+  .main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .about-text h1{
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px ;
+  }
+  .about-text h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 2px;
+    letter-spacing: 2px;
+  }
+.about span{
+  color: black;
+  background-color: crimson;
+}
+.about-text p{
+  color: #fcfc;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+button{
+  background: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .4s;
+}
+button:hover{
+  background: transparent;
+  border:2px solid #f9004d;
+  cursor: pointer;
+}
+/* .about-text:hover{
+  transform: scale(1.1) skew(1deg, 1deg);
+  margin-left: 100px;
+}
+.about img:hover{
+  transform: scale(1.1) skew(1deg, 1deg);
+  margin-right: 100px;
+} */
+.about:hover img{
+  transform: scale(1.1) skew(1deg, 1deg);
+  margin-right: 100px;
+  border-style: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  box-shadow: 5px 5px 100px crimson, -20px 20px 100px lightblue, 30px 10px lightcoral, -20px 20px lightblue;
+}
+.about:hover{
+  /* border-radius: 30px; */
+  border-style: none;
+}
+.about:hover button{
+  transform: scale(1.8);
+  margin-left: 200px;
+}
+
+.contacts{
+  column-width: 200px;
+  column-gap: 30px;
+  column-count: 2;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  /* column-rule: 1px dotted lightblue; */
+}
+.contacts p{
+  color: white;
+  padding-top: 20px;
+}
+.contacts h5{
+  column-span: all;
+  margin-right: 50px;
+}
+h6{
+  font-size: 20px;
+}
+body{
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E,#23A6D5,#23D5AB);
+  /* background: linear-gradient(-45deg, #EE7752, white ,lightblue,crimson); */
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+  backdrop-filter: blur(2);
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+
+}
+@keyframes change {
+  0%{
+    background-position:0 50%;
+  }
+  50%{
+    background-position:100% 50%;
+  }
+  100%{
+    background-position:0 50%;
+  }
+
+}
+    </style>
+  </head>
+  
+  <body>
+    <div class="brand"><a href="#"><h1>F<span>II</span>T <span>4</span> YOU</h1></a>
+
+    </div>
+        <nav>
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="workout.html">Workouts</a></li>
+    <li><a href="Food.html">Food</a></li>
+    <li><a href="About.html" class="active">About</a></li>
+</ul>
+        </nav>
+        <section class="back">
+          <section class="about">
+            <div class="main">
+              <img src="about.JPEG">
+                <div class="about-text">
+                  <h1>About Us</h1>
+                  <h5>Developer<span> & Designer</span></h5>
+                  <p>Hi there, my name is Vadim Boamah and I am the founder/developer of FIIT 4 YOU.
+                    I set about creating this wonderful space to allow everyone the oppurtunity to get 
+                    envolved with thier health and fitness. If you want to reach as please don`t hesitate
+                    to use the below methods.
+                  </p>
+          
+                  <div class="contacts">
+                    <h5>Contacts</h5>
+                    <h6>Phone</h6>
+                    <p>+233 0552195060
+                      <br>
+                      +233 0746232219
+                      <br>
+                    </p>
+                    <h6>Email</h6>
+                    <p>vadimboamah@yahoo.com<br>vadimboamah@gmail.com
+                    </p>
+                    
+                  </div>
+          
+                  <form action="Home.html">
+                    <button type="submit" value="Go to Homepage">JOIN</button>
+                  </form>
+                </div>
+              </div>
+          </section>
+        </section class="back">
+
+  </body>
+</html>

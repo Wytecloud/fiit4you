@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="mystyle.css"> -->
+    <link rel="stylesheet" href="Navbar.css">
+    <style>
+      body{
+        background-image: url(./Images/foodback.JPG);
+        background-size: cover;
+        
+      }
+      img{
+        float: right;
+      }
+      h2{
+        font-size: 3rem;
+        margin-top: 5px;
+        margin-bottom: 10px;
+            }
+      h3{
+      font-size: 30px;
+      text-decoration: underline;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      }
+      dd{
+        font-size: 20px;
+      }
+      dt{
+        font-size: 25px;
+      }
+      .mealPlanInfo{
+        margin-left: 50px;
+        color: white;
+        margin-top: 0px;
+        position:relative;
+        /* background-color: rgba(1, 1, 1, 0.75); */
+      }
+      section{
+        background-color: rgba(1, 1, 1, 0.85);
+        margin-top: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+      }
+      #cal{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        color: white;
+        width: 70vw;
+        height: 60vh;
+        margin-top: 40px;
+        padding: 10px 0 50px 0;
+        display: none;  
+        backdrop-filter: blur(18px);
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px black;
+        border-style:solid;
+        border-width: 1px;
+        border-color: lightskyblue;
+      }
+      h4{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+        margin-top: 0;
+        color: white;
+      }
+      #cal input{
+        height: 40px;
+        width: 120px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 30px;
+        border: white solid;
+        background-color: transparent;
+        color: white;
+        outline: none;
+      }
+      #cal h1{
+        text-decoration: underline dashed white;
+      }
+      span1{
+        color: crimson;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      #btn{
+        border: none;
+        color: #fff;
+        width: 150px;
+        padding: 10px;
+        background-image: linear-gradient(120deg,#ff6b6b,#5f26cd);
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+      }
+      #btn2{
+        border: none;
+        color: #fff;
+        width: 150px;
+        padding: 10px;
+        background-color: crimson;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+      }
+      #btn:hover{
+        box-shadow: 1px 1px 5px grey;
+      }
+      .newclose{
+        position: absolute;
+        top: 0;
+        right: 14px;
+        font-size: 42px;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+      .newclose:hover{
+        color: red;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="brand"><a href="#"><h1>F<span>II</span>T <span>4</span> YOU</h1></a>
+
+    </div>
+        <nav>
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="workout.html">Workouts</a></li>
+    <li><a href="Food.html" class="active">Food</a></li>
+    <li><a href="About.html">About</a></li>
+</ul>
+        </nav>
+        <section id="sec">
+<!--Div for information about meal plan in list format-->
+<div class="mealPlanInfo">
+  <h2 class="title">Meal Plan for Bodybuilding: What to Eat and Avoid</h2>
+  <h3 class="innerTitle">Calorie Needs and Macronutrients</h3>
+  <!--Description List for calories-->
+  <dl>
+      <dt>Calories</dt><span>
+      <dd>- During your bulking phase, it is recommended to increase your calorie by 15%</dd>
+      <dd>- Calculate your maintence calorie and multiply it by 15% and that should be amount you should intake</dd>
+      <dd>- For people who are underweight, it is also recommended to intake 3000+ calories every day to gain weight</dd>
+    </span>
+  </dl>
+  <img class="carbsImage" src="Generica_25576.ico" alt="carbohydrates" />
+  <!--Description List for macronutrients-->
+  <dl>
+      <dt>Macronutrients</dt><span>
+      <dd>- To gain weight, you must determine your macronutrient ratio</dd>
+      <dd>- 30-35% of your calories from protein</dd>
+      <dd>- 55-60% of your calories from carbohydrate</dd>
+      <dd>- 15-20% of your calories from fat</dd> 
+      </span>
+      <dt>Foods to Eat</dt><span>
+      <dd>- Meats, Poultry and Fish for more protein</dd>
+      <dd>- Dairy Products: Yogurt, Cheese, and Milk</dd>
+      <dd>- Fruits: Oranges, Apples, Banana, Berries, Pineapple</dd>
+      <dd>- Vegetables: Broccoli, Spinach, Tomatoes, Mushrooms, Peppers</dd>
+      <dd>- Seeds and Nuts: Almonds, Walnuts, Sunflower Seeds</dd>
+    </span>
+  </dl>
+  <img class="proteinImage" src="Generica_25576.ico" alt="protein" />
+  <!--Description List for foods to avoid-->
+  <dl>
+      <dt>Foods to Avoid</dt><span>
+      <dd>- Fast Food: Burgers, French Fries, Onion Rings </dd>
+      <dd>- Added Sugar</dd>
+      <dd>- Any types of Alcohol</dd>
+      <!--Included anchor tag within the <dd> tag -->
+      <dd>For more information, click this <a style="color:red;" href="https://www.healthline.com/nutrition/bodybuilding-meal-plan#word-of-caution" target="_blank">link</a></dd>
+    </span>
+    </dl>
+
+  <a href="#" onclick="myFunctionb()">
+    <h4 class="BMITitle">Click <span1 title="click me">here</span1> to Calculate your BMI</h4>
+  </a>
+
+</div>  
+</section>
+<center>
+      <div id="cal"> 
+        <div class="newclose" onclick="closeBmi()" title="Close">+</div>
+        <span>
+          <h1>BMI Calculator</h1>
+        </span>
+        <h4 class="BMIvalue">Enter your height (in meters) <input type="tel" id="height" placeholder="eg. 172" maxlength="3" onkeypress="return event.charCode>=48 && event.charCode<=57"></h4>
+        <h4 class="BMIvalue">Enter your weight (in kg) <input type="tel" id="weight" placeholder="eg. 64" maxlength="3" onkeypress="return event.charCode>=48 && event.charCode<=57"></h4>
+        <h4><button type="button" onclick="calculateBmi()" id="btn">Calculate BMI</button></h4>
+        <h4 id="result"></h4>
+        <h4 id="result2"></h4>
+        <h4 id="r3">Your results are shown here.</h4>
+        <!-- <button type="button" onclick="closeBmi()" id="btn2">Close</button> -->
+      </div>
+</center>
+
+  </body>
+</html>
+<script>
+  
+function myFunctionb(){
+  document.getElementById("cal").style.display="block";
+}
+function calculateBmi(){
+  var h=document.getElementById("height").value;
+  var w=document.getElementById("weight").value;
+  var bmi=w/(h/100*h/100);
+  var bmio=(bmi.toFixed(1));
+  document.getElementById("r3").style.display="none";
+  
+
+if(w > 0 && h > 0){	document.getElementById("result").innerHTML="Your BMI is " + bmio;
+if(bmio < 18.5){
+  document.getElementById("result2").innerHTML= "You are unhealthy, too thin."
+    }
+if(bmio > 18.5 && bmio < 25){
+  document.getElementById("result2").innerHTML= "You are healthy enough."
+    }
+if(bmio > 25 &&  bmio <30){
+  document.getElementById("result2").innerHTML= "You have overweight."
+    }
+if(bmio > 30){
+  document.getElementById("result2").innerHTML= "Your condition is serious."
+    }
+    }
+    else{
+    alert("Data you've entered might be incorrect. Please check and try again.")
+    }
+
+    }
+    function closeBmi(){
+    document.getElementById("cal").style.display="none";
+    document.getElementById("height").value="";
+    document.getElementById("weight").value="";
+    document.getElementById("r3").innerHTML="";
+
+  }
+
+</script>

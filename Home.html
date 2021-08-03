@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="mystyle.css">
+        <!-- <script src="test.js"></script> -->
+        <style>
+            #lastpage{
+                background-color:rgba(1,1,1,0.95);
+                height: 100vh;
+                width: 100%;
+                /* background-color: wheat; */
+                font-size: 2rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                position: fixed;
+                text-align: center;
+                display: none;
+                /* display: block; */
+                margin-top: 0px;
+
+            }
+            .workoutplan{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color:white;
+                top: 0;
+                height: 100%;
+                align-items: center;
+            }
+            .workoutplan h1{
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+            .workoutplan p{
+            text-align: left;                
+            }
+            .workoutplan h2{
+                font-size: 30px;
+                text-decoration: underline white;
+                margin-top: 0px;
+            }
+            .workoutplan h3{
+                font-size: 30px;
+                text-align: left;
+                margin-left: 40px;
+            }
+        </style>
+    </head>
+<body>
+    <div class="brand"><a href="First_start.html" title="Return to name page"><h1>F<span>II</span>T <span>4</span> YOU</h1></a>
+
+    </div>
+        <nav>
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="workout.html">Workouts</a></li>
+    <li><a href="Food.html">Food</a></li>
+    <li><a href="About.html">About</a></li>
+</ul>
+        </nav>
+        <div id="lastpage">
+            <div class="workoutplan">
+                <h1>Workout Plan</h1>
+                <span><h2 id="ch"></h2></span>
+                <h3 id="duration"></h3>
+                <h3 id="set"></h3>
+            
+                <h3 id="exercise"></h3>
+            
+            </div>
+        </div>
+ <div id="welcome">
+
+    <div id="center">
+        <h1>Hello,<span></span></h1>
+        <h1 id="show_name"><span></span></h1>
+        <h1>Welcome to <span></span></h1>
+        <h1>Your Goal<span></span></h1>
+        <a href="#projects" type="button" class="cta" onclick="myFunction5()" title="Pick yout Workout">Join</a>
+      </div>
+</div>
+
+
+        <div id="first" >
+            <!-- <h1>Welcome to the best place for all your fitness needs.</h1> -->
+            <h1>Choose your prefered workout below.</h1>
+                       
+                <div class="card" onclick="myFunction11()">
+                    <img src="./images/features-first-icon.png">
+                    <div class="container">
+                        <h1><b>Arms and Chest</b></h1>
+                        <p>Targets your upper body and consists of pushing motions.</p>
+                    </div>
+                </div>
+                <div class="card2" onclick="myFunction12()">
+                    <img src="Generica_25576.ico">
+                    <div class="container">
+                        <h1><b>Abs</b></h1>
+                        <p>This targets your abodominal muscles along with your core prepare for the burn.</p>
+                    </div>
+                </div>
+                <div class="card2" onclick="myFunction13()">
+                    <img src="Generica_25576.ico">
+                    <div class="container">
+                        <h1><b>Legs</b></h1>
+                        <p>Your lower body, let get those legs moving.</p>
+                    </div>
+                </div>
+                
+            
+                </div>
+
+                <div id="second">
+                    <h1>Choose your prefered duration below.</h1>
+                       
+                    <div class="card" onclick="myFunction21()">
+                        <img src="./images/podium.png">
+                        <div class="container">
+                            <h1><b>Short</b></h1>
+                            <p>2 weeks max.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction22()">
+                        <img src="./images/podium.png">
+                        <div class="container">
+                            <h1><b>Medium</b></h1>
+                            <p>Under 4 Months.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction23()">
+                        <img src="./images/podium.png">
+                        <div class="container">
+                            <h1><b>Long</b></h1>
+                            <p>Over 6 Months</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div id= "third" style > 
+
+                    <h1>Choose your skill level below.</h1>
+                       
+                    <div class="card" onclick="myFunction31()">
+                        <img src="Generica_25576.ico">
+                        <div class="container">
+                            <h1><b>Beginner</b></h1>
+                            <p>This is your first time workoing out.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction32()">
+                        <img src="Generica_25576.ico">
+                        <div class="container">
+                            <h1><b>Intermidate</b></h1>
+                            <p>You have been working out from time to time.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction33()">
+                        <img src="Generica_25576.ico">
+                        <div class="container">
+                            <h1><b>Expert</b></h1>
+                            <p>You are fully expeirenced and would like to challenge yourslef.</p>
+                        </div>
+                    </div>
+                </div>
+                
+       
+    </body>
+</html>
+<script>
+    function myFunction11(){
+        var push= `
+        <p>Wide Pushups</p>
+        <p>Normal Pushups</p>
+        <p>Slow Motion Pushup</p>`
+        document.getElementById("first").style.display="none";
+        document.getElementById("ch").innerHTML= " Follow your custom Arms and Chest workout below"
+        document.getElementById("second").style.display="block"
+        document.getElementById("exercise").innerHTML= push
+
+    }
+    function myFunction12(){
+        var abs= `
+        <p>Planche</p>
+        <p>Mountain Climbers</p>
+        <p>Sit-ups</p>
+        </p>`
+        document.getElementById("first").style.display="none"
+        document.getElementById("ch").innerHTML= " Follow your custom Abs workout below"
+        document.getElementById("second").style.display="block"
+        document.getElementById("exercise").innerHTML= abs
+
+    }
+    function myFunction13(){
+        // var legs= `<ul>
+        // <li>Squats</li>
+        // <li>Lunges</li>
+        // <li>Leg-raises</li>
+        // </ul>`
+        var legs=`<p>Squats</p>
+        <p>Lunges</p>
+        <p>Leg-raises</p>`
+        document.getElementById("first").style.display="none"
+        document.getElementById("ch").innerHTML= " Follow your custom Legs workout below"
+        document.getElementById("second").style.display="block"
+        document.getElementById("exercise").innerHTML= legs
+    }
+    function myFunction21(){
+        document.getElementById("second").style.display="none"
+        document.getElementById("duration").innerHTML= " Repeat workout for 2 weeks"
+        document.getElementById("third").style.display="block"
+
+    }
+    function myFunction22(){
+        document.getElementById("second").style.display="none"
+        document.getElementById("duration").innerHTML= " Repeat workout for 3 months"
+        document.getElementById("third").style.display="block"
+    }
+    function myFunction23(){
+        document.getElementById("second").style.display="none"
+        document.getElementById("duration").innerHTML= " Repeat workout for 6 months"
+        document.getElementById("third").style.display="block"
+    }
+    function myFunction31(){
+        document.getElementById("third").style.display="none"
+        document.getElementById("lastpage").style.display="block"
+        document.getElementById("set").innerHTML= "Do 1 set of each exercise with repetition of 5 with a rest period of about 20 seconds"
+
+    }
+    function myFunction32(){
+        document.getElementById("third").style.display="none"
+        document.getElementById("lastpage").style.display="block"
+        document.getElementById("set").innerHTML= "Do 2 set of each exercise with repetition of 10 with a rest period of about 15 seconds"
+        
+    }
+    function myFunction33(){
+        document.getElementById("third").style.display="none"
+        document.getElementById("lastpage").style.display="block"
+        document.getElementById("set").innerHTML= "Do 3 set of each exercise with repetition of 15 with a rest period of about 10 seconds"
+
+    }
+    function myFunction4(){
+        document.getElementById("userinput").style.display="none"
+        var oName = document.getElementById("txtData").value;
+        document.getElementById("show_name").innerHTML=oName;
+    }
+    function myFunction5(){
+        document.getElementById("welcome").style.display="none"
+        document.getElementById("first").style.display="block"
+    }
+    // document.getElementById("show_name").innerHTML=oName;
+    document.getElementById("show_name").innerHTML=localStorage.getItem("textvalue");
+
+</script>
