@@ -237,7 +237,7 @@ text-align: center;}
 .card img,.card2 img,.card3 img{
     align-content: center;
     margin-left:50px ;
-    width: fit-content;
+    /* width: fit-content; */
     height: 200px;
 }
 .container p{
