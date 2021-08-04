@@ -2,8 +2,22 @@
 <html>
     <head>
         <link rel="stylesheet" href="mystyle.css">
+
         <!-- <script src="test.js"></script> -->
         <style>
+        
+            .newclose{
+        position: absolute;
+        color: white;
+        top: 0;
+        right: 14px;
+        font-size: 42px;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+      .newclose:hover{
+        color: red;
+      }
             #lastpage{
                 background-color:rgba(1,1,1,0.95);
                 height: 100vh;
@@ -24,6 +38,7 @@
                 top: 0;
                 height: 100%;
                 align-items: center;
+                display: block;
             }
             .workoutplan h1{
                 margin-top: 10px;
@@ -42,6 +57,21 @@
                 text-align: left;
                 margin-left: 40px;
             }
+            #btn2{
+        border: none;
+        color: #fff;
+        height: 40px;
+        width: 200px;
+        background-color: crimson;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+        font-size: 30px;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      #btn2:hover{
+        box-shadow: 1px 1px 5px grey;
+      }
         </style>
     </head>
 <body>
@@ -57,15 +87,21 @@
 </ul>
         </nav>
         <div id="lastpage">
-            <div class="workoutplan">
-                <h1>Workout Plan</h1>
-                <span><h2 id="ch"></h2></span>
-                <h3 id="duration"></h3>
-                <h3 id="set"></h3>
-            
-                <h3 id="exercise"></h3>
-            
+            <div class="newclose" onclick="closeBmi()" title="Close">+</div>
+            <div id="printarea">
+                <div class="workoutplan">
+                    <h1>Workout Plan</h1>
+                    <span><h2 id="ch"></h2></span>
+                    <h3 id="duration"></h3>
+                    <h3 id="set"></h3>
+                
+                    <h3 id="exercise"></h3>
+                
+                </div>
+                
+
             </div>
+<button id="btn2" onclick="planprint()">Print Plan</button>
         </div>
  <div id="welcome">
 
@@ -86,21 +122,21 @@
                 <div class="card" onclick="myFunction11()">
                     <img src="arms.png" style="width: 180px;height: 150px;margin-left: 60px;">
                     <div class="container">
-                        <h1><b>Arms and Chest</b></h1>
+                        <h1 style="padding-top: 50px;"><b>Arms and Chest</b></h1>
                         <p>Targets your upper body and consists of pushing motions.</p>
                     </div>
                 </div>
                 <div class="card2" onclick="myFunction12()">
-                    <img src="abs.PNG">
+                    <img src="ab.PNG"style="width: 200px;height: 200px;margin-left: 60px;">
                     <div class="container">
-                        <h1><b>Abs</b></h1>
+                        <h1 style="padding-top: 0;"><b>Abs</b></h1>
                         <p>This targets your abodominal muscles along with your core prepare for the burn.</p>
                     </div>
                 </div>
                 <div class="card2" onclick="myFunction13()">
-                    <img src="Generica_25576.ico">
+                    <img src="legs.PNG "style="width: 200px;height: 200px;margin-left: 60px;">
                     <div class="container">
-                        <h1><b>Legs</b></h1>
+                        <h1 style="padding-top: 0;"><b>Legs</b></h1>
                         <p>Your lower body, let get those legs moving.</p>
                     </div>
                 </div>
@@ -112,21 +148,21 @@
                     <h1>Choose your prefered duration below.</h1>
                        
                     <div class="card" onclick="myFunction21()">
-                        <img src="./Images/podium.png">
+                        <img src="./Images/cal1.PNG" style="height: 200px;width: 200px;margin-left: 50px;"> 
                         <div class="container">
                             <h1><b>Short</b></h1>
                             <p>2 weeks max.</p>
                         </div>
                     </div>
                     <div class="card2" onclick="myFunction22()">
-                        <img src="./Images/podium.png">
+                        <img src="./Images/cal2.PNG" style="height: 200px;width: 200px;margin-left: 50px;">
                         <div class="container">
                             <h1><b>Medium</b></h1>
                             <p>Under 4 Months.</p>
                         </div>
                     </div>
                     <div class="card2" onclick="myFunction23()">
-                        <img src="./Images/podium.png">
+                        <img src="./Images/call3.PNG" style="height: 200px;width: 200px;margin-left: 50px;">
                         <div class="container">
                             <h1><b>Long</b></h1>
                             <p>Over 6 Months</p>
@@ -140,21 +176,21 @@
                     <h1>Choose your skill level below.</h1>
                        
                     <div class="card" onclick="myFunction31()">
-                        <img src="Generica_25576.ico">
+                        <img src="./Images/begin.PNG" style="margin-left: 15px;">
                         <div class="container">
                             <h1><b>Beginner</b></h1>
                             <p>This is your first time workoing out.</p>
                         </div>
                     </div>
                     <div class="card2" onclick="myFunction32()">
-                        <img src="Generica_25576.ico">
+                        <img src="./Images/inter.PNG">
                         <div class="container">
                             <h1><b>Intermidate</b></h1>
                             <p>You have been working out from time to time.</p>
                         </div>
                     </div>
                     <div class="card2" onclick="myFunction33()">
-                        <img src="Generica_25576.ico">
+                        <img src="./Images/exp.PNG" style="margin-left: 35px;">
                         <div class="container">
                             <h1><b>Expert</b></h1>
                             <p>You are fully expeirenced and would like to challenge yourslef.</p>
@@ -189,11 +225,6 @@
 
     }
     function myFunction13(){
-        // var legs= `<ul>
-        // <li>Squats</li>
-        // <li>Lunges</li>
-        // <li>Leg-raises</li>
-        // </ul>`
         var legs=`<p>Squats</p>
         <p>Lunges</p>
         <p>Leg-raises</p>`
@@ -227,13 +258,13 @@
     function myFunction32(){
         document.getElementById("third").style.display="none"
         document.getElementById("lastpage").style.display="block"
-        document.getElementById("set").innerHTML= "Do 2 set of each exercise with repetition of 10 with a rest period of about 15 seconds"
+        document.getElementById("set").innerHTML= "Do 2 sets of each exercise with repetition of 10 with a rest period of about 15 seconds"
         
     }
     function myFunction33(){
         document.getElementById("third").style.display="none"
         document.getElementById("lastpage").style.display="block"
-        document.getElementById("set").innerHTML= "Do 3 set of each exercise with repetition of 15 with a rest period of about 10 seconds"
+        document.getElementById("set").innerHTML= "Do 3 sets of each exercise with repetition of 15 with a rest period of about 10 seconds"
 
     }
     function myFunction4(){
@@ -244,6 +275,17 @@
     function myFunction5(){
         document.getElementById("welcome").style.display="none"
         document.getElementById("first").style.display="block"
+    }
+    function closeBmi(){
+        document.getElementById("lastpage").style.display="none"
+        document.getElementById("welcome").style.display="block"
+    }
+    function planprint(){
+        var printContents = document.getElementById("printarea").innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
     }
     // document.getElementById("show_name").innerHTML=oName;
     document.getElementById("show_name").innerHTML=localStorage.getItem("textvalue");

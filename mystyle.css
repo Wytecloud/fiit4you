@@ -51,23 +51,15 @@ span{
 .active:hover{
     color: white;
 }
-/* iframe{
-    background-color: honeydew;
-    border-radius: 25px;
-    margin-left: 25%;
-    height: 50vh;
-    width: 800px;
-    border-style: none;
-} */
 h1,p,h2{
     text-align: center;
 }
-#first, #second, #third,#welcome,#ptable{
+#first, #second, #third,#welcome{
     background-color: transparent;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: none;
-    position: absolute;
+    position: fixed;
 }
 #userinput{
     background-color: rgba(0,0,0,0.7);
@@ -91,7 +83,6 @@ a{
 	margin-top: 30px;
 	transition: 0.3s ease;
 	transition-property: background-color, color;
-    position: fixed;
 }
 .cta:hover {
 	color: white;
@@ -105,7 +96,7 @@ a{
     height: 100vh;
     width: 100%;
     display: inline-block;
-    position: relative;
+    position: fixed;
 }
 #welcome h1 {
     line-height: 0.2;
@@ -181,21 +172,18 @@ a{
 }
 
 .card{
-    /* background-image:url(pexelsphoto1594932.jpeg);
-    background-size: cover; */
-    
     background-color:rgba(0,0,0,0.2) ;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 300px;
     float:left;
-    margin-left: 15vw;
+    margin-left: 200px;
     margin-top: 40px;
     margin-right: 5px;
     padding: 10px 5px 10px 20px;
-    height: 350px;
+    height: 400px;
 }
 .card:hover,.card2:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -203,10 +191,15 @@ a{
     transform: scale(1.25);
     font-size: larger;
 }
+/* #third{
+    display: block;
+    position: fixed;
+    z-index: 999999;
+}
+#welcome{
+    display: none;
+} */
 .card2{
-    /* background-image:url(pexelsphoto1594932.jpeg);
-    background-size: cover; */
-    
     background-color:rgba(0,0,0,0.2) ;
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -218,7 +211,7 @@ a{
     margin-top: 40px;
     margin-right: 5px;
     padding: 10px 5px 10px 20px;
-    height: 350px;
+    height: 400px;
 }
 .card3{
     background-color:rgba(0,0,0,0.2) ;
@@ -243,8 +236,9 @@ h1 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 text-align: center;}
 .card img,.card2 img,.card3 img{
     align-content: center;
-    margin-left:80px ;
+    margin-left:50px ;
     width: fit-content;
+    height: 200px;
 }
 .container p{
     font-size: 20px;
