@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Workout Info page</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- <link rel="stylesheet" href="mystyle.css"> -->
     <link rel="stylesheet" href="Navbar.css">
 <style>
@@ -9,24 +11,28 @@
     margin: 0;
   }
 #first{
-    background-color: peachpuff;
+    background-color: rgba(1,1,1,0.75);
     height: 100vh;
     width: 100%;
     display: inline-block;
     position: relative;
     margin-top: 0;
+    padding-top: 15px;
+    z-index: 3;
         }
 #second{
-    background-color: lightgreen;
+    background-color: rgba(0, 0, 0, 0.75);
     height: 100vh;
     display: inline-block;
+    padding-top: 15px;
     width: 100%;
     position: relative;
 }
 #third{
-    background-color: lightblue;
+    background-color: rgba(0, 0, 0, 0.75);
     height: 100vh;
     display:inline-block;
+    padding-top: 15px;
     width: 100%;
     position: relative;
  }
@@ -37,14 +43,54 @@
    text-align: center;
    font-size: 2rem;
    color: white;
-   background-color: thistle;
+   /* background-color: thistle; */
+ }
+ nav{
+   /* background-color: black; */
+   display: flex;
+   position: fixed;
+   z-index: 5;
+ }
+ #bnav{
+   bottom: 0;
+   z-index: 10;
+   background-color: #262626;
+   height: 50px;
+   width: 100vw;
+   position: fixed;
+ }
+ #bnav a{
+   font-size: 30px;
+   color: white;
+   display: block;
+   padding: 8px 20px;
+   width: 150px;
+   margin-left: 150px;
+   /* margin-left: 10vw; */
+ }
+ #bnav a:hover{
+   color: crimson;
+ }
+ table{
+   background-color: rgba(0, 0, 0, 0.75);
+   backdrop-filter: blur(20px);
+   border:1px solid snow;
+   padding: 10px;
+ }
+ td{
+   color: white;
+   text-align: center;
+ }
+ *{
+   scroll-behavior: smooth;
  }
 </style>
 
 
   </head>
   <body>
-    <div class="brand"><a href="#"><h1>F<span>II</span>T <span>4</span> YOU</h1></a>
+    <div id="page">
+    <div class="brand"><a href="#"><h1 style="z-index: 10;position: fixed;">F<span>II</span>T <span>4</span> YOU</h1></a>
 
     </div>
         <nav>
@@ -55,20 +101,96 @@
     <li><a href="About.html">About</a></li>
 </ul>
         </nav>
+        <div id="bnav">
+          <ul>
+            <li><a href="#a">Arms</a></li>
+            <li><a href="#b" >Abs</a></li>
+            <li><a href="#c">Legs</a></li>
+        </ul>
+      </div>
 
-        <div id="tutorial">
-          <div id="first" >
-            <h1>Arms and Chest exercise.</h1>
-            <h2>Pushups</h2>
+      <a id="a"></a>
+          <div>
+            <div id="first" >
+              
+              <span><h1>Arms and Chest exercise.</h1></span>
+              <h2>Pushups</h2>
+              <center>
+                <table style="font-size: 30px;width: 60vw;">
+                  <tr>
+                    <td>Wide</td>
+                    <td>Normal</td>
+                    <td>Slow-Motion</td>
+                  </tr>
+                  <tr>
+                    <td>This is normal push-up with the variation of have yout arms wider apart than normal</td>
+                    <td>Place your arms under your body holding yourself up and lower yourself to the ground the psuh
+                      yourself back up. Thats one push-up</td>
+                    <td>This is like the normal pushup just at a slower pace. You will really feel the burn on this one</td>
+                  </tr>
+                </table>
+              </center>
+                  </div>
+                  </div>
+              <a id="b"></a>
+              <div>
+            <div id="second" >
+                    <span><h1>Abs exercise</h1></span>
+                    <h2>Crunches and Planks</h2>
+                    <center>
+                      <table style="font-size: 30px;width: 60vw;">
+                        <tr>
+                          <td>Plank</td>
+                          <td>Lay on the floor with your elbows under your shoulders,hands flat
+                            on the floor and core engaged.keeping your forearms and kness on the floor slowly raise yourself upwards until 
+                            your vody is in a straight line from your knees to your head. Hold the position for as long as you can.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mountain Climbers</td>
+                          <td>From a plank position bring your right knee under your chest towards your right elbow. Return your right 
+                            leg back to plank position, now bring your left leg under your chest towards your left elbow. Congrats you`ve completed
+                            one rep of Mountain Climbers, now repeat.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Sit-ups</td>
+                          <td>Lay on a flat surface with knees up feet touching the ground. Proceed to lift your torso upwards using 
+                            only your core then loweryour body back down.</td>
+                        </tr>
+                      </table>
+                    </center>
+                  </div>
                 </div>
-          <div id="second" >
-                  <h1>Abs exercise</h1>
-                  <h2>Crunches and Planks</h2>
+                <a id="c"></a>
+                <div>
+            <div id="third" >
+              
+                    <span><h1>Legs exercise</h1></span>
+                    <h2>Squats and Jumps</h2>
+                    <center>
+                      <table style="font-size: 30px;width: 60vw;">
+                        <tr>
+                          <td>Squats</td>
+                          <td>Lunges</td>
+                          <td>Leg raises</td>
+                        </tr>
+                        <tr>
+                          <td>While standing up with your hands streched out infront of you,
+                            slowly lower your body by bending your knees till they almost form a 90deg angle, then come back up adn repeat.
+                          </td>
+                          <td>Alternate your legs, right infront left towards the back of you, then right behind you and left leg infront of you </td>
+                          <td>Lay flat on a safe surface, legs together slowly lift your leg upwards while your torso remains flat on the surface, go as for
+                            as you can then hold for a few seconds then release bringing your legs back down to starting position.(this also works your abs)
+                          </td>
+                        </tr>
+                      </table>
+                    </center>
+                  </div>
                 </div>
-          <div id="third" >
-                  <h1>Legs exercise</h1>
-                  <h2>Squats and Jumps</h2>
-                </div>
-        </div>
+                  
+            <div>
+          </div>
+        
   </body>
 </html>
