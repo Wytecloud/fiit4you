@@ -91,6 +91,8 @@ a{
 #center{
     /* margin-left: 400px; */
     margin-left: 25vw;
+    margin-right: 0;
+    padding-right: 0;
 }
 #welcome {
     background-color: transparent;
@@ -98,6 +100,10 @@ a{
     width: 100%;
     display: inline-block;
     position: fixed;
+}
+#welcome h1, #welcome h2, #welcome h3, #welcome span{
+    padding-right: 0;
+    margin-right: 0;
 }
 #welcome h1 {
     line-height: 0.2;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Fiit 4 You</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
         <style>
@@ -59,8 +60,10 @@ input{
     width: 240px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    margin-right: 109px;
-    margin-left: 1010px;
+    /* margin-right: 109px; */
+    /* margin-left: 1010px; */
+    margin-left: 60px;
+    bottom: 0;
     border-style: solid;
     text-align: center;
     text-transform: capitalize;
@@ -89,7 +92,16 @@ input:hover{
     width: 100%;
     position: absolute
 }
-
+@media all and (max-device-width:480px){
+    img{
+    border-radius: 30px;
+    margin: 20px 10px 0px 50px;
+    height: 300px;
+    width: 300px;
+    margin-left: 360px;
+}
+            }
+           
         </style>
     </head>
 <body>
@@ -105,9 +117,12 @@ input:hover{
     
 
         <div id="userinput">           
-             <p>Please Enter your Name </p> </div>
+             <p>Please Enter your Name </p> 
              <div>
-                <input type="text" id="txtData" placeholder="click above image to submit" autocomplete="off"></div>
+                <input type="text" id="txtData" placeholder="click above image to submit" autocomplete="off">
+            </div>
+            </div>
+             
                     
 
 </section>
