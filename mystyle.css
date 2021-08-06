@@ -238,7 +238,7 @@ a{
 .container{
     padding: 2px 16px;
 }
-#first h2{text-align: center;}
+/* #first h2{text-align: center;} */
 h1 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 text-align: center;}
 .card img,.card2 img,.card3 img{
