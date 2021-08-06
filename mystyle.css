@@ -89,7 +89,8 @@ a{
 	background-color: crimson;
 }
 #center{
-    margin-left: 400px;
+    /* margin-left: 400px; */
+    margin-left: 25vw;
 }
 #welcome {
     background-color: transparent;
