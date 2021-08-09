@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>
+      Fiit Food
+  </title>
     <!-- <link rel="stylesheet" href="mystyle.css"> -->
     <link rel="stylesheet" href="Navbar.css">
     <style>
@@ -67,7 +70,7 @@
         height: 100vh;
       }
       #cal{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
         position: relative;
         color: white;
         width: 70vw;
@@ -144,6 +147,66 @@
       .newclose:hover{
         color: red;
       }
+      /* a:hover{
+        cursor: pointer;
+      } */
+      @media all and (max-device-width:480px){
+        .carimg {
+          margin-left: 0;
+        margin-top: 0;
+        /* bottom: 0; */
+        height: 260px;
+        width: 430px;
+        position: fixed;
+        margin-top: 1000px;
+        padding-top: 0px;
+        float:none;
+        box-shadow: none;
+        z-index: 3;
+
+      }
+      .proimg {
+        margin-left: 470px;
+        margin-top: 0;
+        /* bottom: 0; */
+        height: 260px;
+        width: 430px;
+        position:fixed;
+        margin-top: 1000px;
+        padding-top: 0px;
+        padding-right:800px ;
+        float:none;
+        z-index: 3;
+        box-shadow: none;
+      }
+      .carimg:hover{
+        transform: skew(2deg) scale(1.1) translateY(-50px) translateX(55px);
+        z-index: 4;
+        
+      }
+      img:hover{
+        transform: skew(2deg) scale(1.1) translateY(-50px) translateX(-55px);
+        box-shadow: none;
+      }
+      #relocate{
+        position: fixed;
+        margin-top: 300px;
+        z-index: 20;
+      }
+      #relocate h4{
+        font-size: 90px;
+      }
+      #cal{
+        background-color: rgba(0, 0, 0, 1);
+        backdrop-filter: none;
+      }
+      #sec{
+        font-size: 50px;
+      }
+      nav a{
+        z-index: 999;
+      }
+            }
     </style>
 
   </head>
@@ -201,7 +264,7 @@
     </span>
     </dl>
 
-  <a href="#" onclick="myFunctionb()">
+  <a href="#" onclick="myFunctionb()" id="relocate">
     <h4 class="BMITitle">Click <span1 title="click me">here</span1> to Calculate your BMI</h4>
   </a>
 

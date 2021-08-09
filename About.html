@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>
+      Fiit About
+  </title>
     <link rel="stylesheet" href="Navbar.css">
     <style>
   *{
@@ -104,6 +107,11 @@ button:hover{
   transform: scale(1.8);
   margin-left: 200px;
 }
+#new{
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+}
 
 .contacts{
   column-width: 200px;
@@ -151,6 +159,45 @@ body{
   }
 
 }
+@media only screen and (max-device-width:480px){
+                .about{
+                  backdrop-filter: none;
+                  height: 70vh;
+                }
+                .about-text{
+                  position: fixed;
+                  /* padding-top: 1200px; */
+                  margin-top: 1200px;
+                }
+                .about:hover h1{
+                  transform: scale(1.1) translateY(20px);
+                  font-weight: 500;
+                  /* color: black; */
+                  text-decoration: underline white;
+                }
+                .about:hover p{
+                  /* transform: scale(1.3) translateY(10px);   */
+                  font-family:Verdana, Geneva, Tahoma, sans-serif;
+                  font-size: 20px;
+                  padding-bottom: 10px;
+                  color: white;
+                }
+                .about:hover h5,.about:hover h6{
+                  /* transform:translateY(15px);   */
+                  font-family:Verdana, Geneva, Tahoma, sans-serif;
+                  font-size: 30px;
+                  color: crimson;
+                }
+                .about h5,.about h1{
+                  padding-bottom: 30px;
+                }
+                .about:hover span{
+                  background-color: white;
+                }
+                .about:hover #new{
+                  background-color: crimson;
+                }
+            }
     </style>
   </head>
   
@@ -170,7 +217,7 @@ body{
           <section class="about">
             <div class="main">
               <img src="about.JPEG">
-                <div class="about-text">
+                <dsiv class="about-text">
                   <h1>About Us</h1>
                   <h5>Developer<span> & Designer</span></h5>
                   <p>Hi there, my name is Vadim Boamah and I am the founder/developer of FIIT 4 YOU.
@@ -180,7 +227,7 @@ body{
                   </p>
           
                   <div class="contacts">
-                    <h5>Contacts</h5>
+                    <h5><span id="new">Contacts</span></h5>
                     <h6>Phone</h6>
                     <p>+233 0552195060
                       <br>
@@ -196,7 +243,7 @@ body{
                   <form action="Home.html">
                     <button type="submit" value="Go to Homepage">JOIN</button>
                   </form>
-                </div>
+                </dsiv>
               </div>
           </section>
         </section>
