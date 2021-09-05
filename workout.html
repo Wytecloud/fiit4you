@@ -4,6 +4,7 @@
     Fiit Workouts
 </title>
   <head>
+    <link rel="shortcut icon" href="arms.png">
     <title>Workout Info page</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- <link rel="stylesheet" href="mystyle.css"> -->
@@ -46,8 +47,7 @@
    text-align: center;
    font-size: 2rem;
    color: white;
-   /* background-color: thistle; */
- }
+  }
  nav{
    /* background-color: black; */
    display: flex;
@@ -84,6 +84,73 @@
    color: white;
    text-align: left;
    padding: 10px;
+ }
+ #animation{
+  position: absolute;
+   margin-top: 150px;
+   z-index: 20;
+   display: none;
+   margin-left: 32vw;
+ }
+ #animation2,#animation3{
+  position: absolute;
+   margin-top: 150px;
+   z-index: 20;
+   display: none;
+   margin-left: 34vw;
+   /* transform: scale(2); */
+ }
+ #animation p{
+ position: absolute;
+ margin-top: 0;
+ right: 14px;
+ font-size: 42px;
+ transform: rotate(45deg);
+ cursor: pointer;
+ }
+ #animation2 p,#animation3 p{
+ position: absolute;
+ margin-top: 0;
+ right: 14px;
+ font-size: 42px;
+ transform: rotate(45deg);
+ cursor: pointer;
+ }
+ #animation img{
+   border-radius: 10px;
+   /* border-style: solid; */
+   box-shadow: rgba(75, 65, 65,0.50) 10px 0 10px 0;
+  }
+  #animation2 img,#animation3 img{
+    height: 450px;
+   border-radius: 10px;
+   /* border-style: solid; */
+   box-shadow: rgba(75, 65, 65,0.50) 10px 0 10px 0;
+  }
+ #animation p:hover,#animation2 p:hover,#animation3 p:hover{
+        color: red;
+ }
+ .bts{
+   color: white;
+   background-color: transparent;
+   border: white 1px solid;
+   border-radius: 10px;
+   font-size: 25px;
+   padding: 8px;
+   margin-top: 20px;
+   width: 100px;
+   margin-left: 45vw;
+   /* border-style: none; */
+   cursor: pointer;
+ }
+ .bts:hover{
+   border: none;
+   background-color: crimson;
+   transform: scale(1.1);
+   /* color: crimson; */
+ }
+ .bts:focus{
+   outline: none;
  }
  *{
    scroll-behavior: smooth;
@@ -132,6 +199,10 @@
       <a id="a"></a>
           <div>
             <div id="first" >
+              <div id="animation">
+                <p onclick="closeanime()" title="Close">+</p>
+                <img src="tenor.gif" alt="gif">
+              </div>
               
               <span><h1>Arms and Chest exercise.</h1></span>
               <h2>Pushups</h2>
@@ -144,17 +215,23 @@
                   </tr>
                   <tr>
                     <td>This is normal push-up with the variation of have yout arms wider apart than normal</td>
-                    <td>Place your arms under your body holding yourself up and lower yourself to the ground the psuh
+                    <td>Place your arms under your body holding yourself up and lower yourself to the ground,then psuh
                       yourself back up. Thats one push-up</td>
                     <td>This is like the normal pushup just at a slower pace. You will really feel the burn on this one</td>
                   </tr>
                 </table>
               </center>
+              <button class="bts" onclick="openanime()">Play</button>
+              
                   </div>
                   </div>
               <a id="b"></a>
               <div>
             <div id="second" >
+              <div id="animation2">
+                <p onclick="closeanime2()" title="Close">+</p>
+                <img src="absanime.gif" alt="gif">
+              </div>
                     <span><h1 id="absfix">Abs exercise</h1></span>
                     <h2>Crunches and Planks</h2>
                     <center>
@@ -178,16 +255,20 @@
                         </tr>
                       </table>
                     </center>
+                    <button class="bts" onclick="openanime2()">Play</button>
                   </div>
                 </div>
                 <a id="c"></a>
                 <div>
             <div id="third" >
-              
+              <div id="animation3">
+                <p onclick="closeanime3()" title="Close">+</p>
+                <img src="legsanime.gif" alt="gif">
+              </div>
                     <span><h1>Legs exercise</h1></span>
                     <h2>Squats and Jumps</h2>
                     <center>
-                      <table style="font-size: 30px;width: 70vw;padding:10px 10px 10px 10px;">
+                      <table style="font-size: 30px;width: 75vw;padding:10px 10px 10px 10px;">
                         <tr>
                           <td style="border-bottom: white 1px solid;text-align: center;">Squats</td>
                           <td style="border-bottom: white 1px solid;margin-top: 0px;text-align: center;">Lunges</td>
@@ -204,6 +285,7 @@
                         </tr>
                       </table>
                     </center>
+                    <button class="bts" onclick="openanime3()">Play</button>
                   </div>
                 </div>
                   
@@ -211,4 +293,26 @@
           </div>
         
   </body>
-</html>
+  <script>
+
+    function closeanime(){
+    document.getElementById("animation").style.display="none";
+    }
+    function openanime(){
+      document.getElementById("animation").style.display="block";
+      document,getElementById("third").h2.style.transform
+    }
+    function closeanime2(){
+    document.getElementById("animation2").style.display="none";
+    }
+    function openanime2(){
+      document.getElementById("animation2").style.display="block";
+    }
+    function closeanime3(){
+    document.getElementById("animation3").style.display="none";
+    }
+    function openanime3 (){
+      document.getElementById("animation3").style.display="block";
+    }
+  </script>
+</html> 
