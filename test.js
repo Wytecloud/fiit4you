@@ -72,7 +72,35 @@ function myFunction11(){
         document.getElementById("welcome").style.display="none"
         document.getElementById("first").style.display="block"
     }
-    function closeBmi(){
+    function closePrint(){
         document.getElementById("lastpage").style.display="none"
         document.getElementById("welcome").style.display="block"
+    }
+
+    function closeanime(){
+        document.getElementById("animation").style.display="none";
+    }
+    function openanime(){
+          document.getElementById("animation").style.display="block";
+          document,getElementById("third").h2.style.transform
+    }
+    function closeanime2(){
+        document.getElementById("animation2").style.display="none";
+    }
+    function openanime2(){
+          document.getElementById("animation2").style.display="block";
+    }
+    function closeanime3(){
+        document.getElementById("animation3").style.display="none";
+    }
+    function openanime3 (){
+          document.getElementById("animation3").style.display="block";
+    }
+
+    function planprint(){
+        var printContents = document.getElementById("printarea").innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
     }

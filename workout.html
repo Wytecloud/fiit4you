@@ -4,16 +4,20 @@
     Fiit Workouts
 </title>
   <head>
-    <link rel="shortcut icon" href="arms.png">
+    <link rel="shortcut icon" href="images/arms.png">
     <title>Workout Info page</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- <link rel="stylesheet" href="mystyle.css"> -->
     <link rel="stylesheet" href="Navbar.css">
+    <script src="test.js"></script>
 <style>
   html, body{
     padding: 0;
     margin: 0;
   }
+  /* .bts img{
+    height: 50px;
+  } */
 #first{
     background-color: rgba(1,1,1,0.75);
     height: 100vh;
@@ -134,6 +138,7 @@
    color: white;
    background-color: transparent;
    border: white 1px solid;
+   /* border: none; */
    border-radius: 10px;
    font-size: 25px;
    padding: 8px;
@@ -201,7 +206,7 @@
             <div id="first" >
               <div id="animation">
                 <p onclick="closeanime()" title="Close">+</p>
-                <img src="tenor.gif" alt="gif">
+                <img src="images/tenor.gif" alt="gif">
               </div>
               
               <span><h1>Arms and Chest exercise.</h1></span>
@@ -230,7 +235,7 @@
             <div id="second" >
               <div id="animation2">
                 <p onclick="closeanime2()" title="Close">+</p>
-                <img src="absanime.gif" alt="gif">
+                <img src="images/absanime.gif" alt="gif">
               </div>
                     <span><h1 id="absfix">Abs exercise</h1></span>
                     <h2>Crunches and Planks</h2>
@@ -255,7 +260,10 @@
                         </tr>
                       </table>
                     </center>
-                    <button class="bts" onclick="openanime2()">Play</button>
+                    <button class="bts" onclick="openanime2()">
+                      <!-- <img src="playbtn.png" alt="play"> -->
+                      Play
+                    </button>
                   </div>
                 </div>
                 <a id="c"></a>
@@ -263,7 +271,7 @@
             <div id="third" >
               <div id="animation3">
                 <p onclick="closeanime3()" title="Close">+</p>
-                <img src="legsanime.gif" alt="gif">
+                <img src="images/legsanime.gif" alt="gif">
               </div>
                     <span><h1>Legs exercise</h1></span>
                     <h2>Squats and Jumps</h2>
@@ -293,26 +301,4 @@
           </div>
         
   </body>
-  <script>
-
-    function closeanime(){
-    document.getElementById("animation").style.display="none";
-    }
-    function openanime(){
-      document.getElementById("animation").style.display="block";
-      document,getElementById("third").h2.style.transform
-    }
-    function closeanime2(){
-    document.getElementById("animation2").style.display="none";
-    }
-    function openanime2(){
-      document.getElementById("animation2").style.display="block";
-    }
-    function closeanime3(){
-    document.getElementById("animation3").style.display="none";
-    }
-    function openanime3 (){
-      document.getElementById("animation3").style.display="block";
-    }
-  </script>
 </html> 
