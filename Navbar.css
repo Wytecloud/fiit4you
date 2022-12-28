@@ -1,8 +1,16 @@
 nav{
-    width: 100%;
-    background: #262626;
-    overflow: auto  ;
+    /* width: 100%; */
+    width: 100vw;
+    /* background: #262626; */
+    /* overflow: auto  ; */
     text-decoration: none;
+}
+
+header {
+    width: 100vw;
+    background-color: #262626;
+    position: fixed;
+    z-index: 10;
 }
 a {
 	text-decoration: none;

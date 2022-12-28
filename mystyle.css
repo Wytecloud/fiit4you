@@ -1,8 +1,13 @@
 nav{
-    width: 100%;
-    background: #262626;
-    overflow: auto  ;
+    width: 100vw;
+    /* background: #262626; */
+    /* overflow: auto; */
     text-decoration: none;
+}
+
+header {
+    background: #262626;
+    position: fixed;
 }
 a {
 	text-decoration: none;
@@ -60,6 +65,7 @@ h1,p,h2{
     width: 100vw;
     display: none;
     position: fixed;
+    margin-top: 10vh;
 }
 #userinput{
     background-color: rgba(0,0,0,0.7);
