@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="Images/arms.png">
+        <title>
+            Fiit Home
+        </title>
+        <link rel="stylesheet" href="mystyle.css">
+
+        <script src="test.js"></script>
+        <style>
+            @media only screen and (max-device-width:480px){
+                #center{
+                margin-left: 3vw;
+            }
+            #welcome h1{
+                font-size: 8rem;
+                /* text-align: center; */
+                text-overflow: clip;
+            }
+            .card,.card2,.card3{
+                backdrop-filter: none;
+                background-color: rgba(158, 59, 59, 0.8);
+                margin-bottom: 30px;
+                transform: scale(1.1);
+            }
+            .card{
+                margin-left: 35vw;
+                
+            }
+            .card2{
+                margin-left: 35vw;
+
+            }
+            body{
+                height: 100%;
+            }
+            }
+        
+            .newclose{
+        position: absolute;
+        color: white;
+        top: 0;
+        right: 14px;
+        font-size: 42px;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+      .newclose:hover{
+        color: red;
+      }
+            #lastpage{
+                background-color:rgba(1,1,1,0.95);
+                height: 100vh;
+                width: 100%;
+                /* background-color: wheat; */
+                font-size: 2rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                position: fixed;
+                text-align: center;
+                display: none;
+                /* display: block; */
+                margin-top: 0px;
+
+            }
+            .workoutplan{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color:white;
+                top: 0;
+                height: 100%;
+                align-items: center;
+                display: block;
+            }
+            .workoutplan h1{
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+            .workoutplan p{
+            text-align: left;                
+            }
+            .workoutplan h2{
+                font-size: 30px;
+                text-decoration: underline white;
+                margin-top: 0px;
+            }
+            .workoutplan h3{
+                font-size: 30px;
+                text-align: left;
+                margin-left: 40px;
+            }
+            #btn2{
+        border: none;
+        color: #fff;
+        height: 40px;
+        width: 200px;
+        background-color: crimson;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+        font-size: 30px;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      #btn2:hover{
+        box-shadow: 1px 1px 5px grey;
+      }
+        </style>
+    </head>
+<body>
+    <div class="brand"><a href="First_start.html" title="Return to name page"><h1>F<span>II</span>T <span>4</span> YOU</h1></a>
+
+    </div>
+        <nav>
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="workout.html">Workouts</a></li>
+    <li><a href="Food.html">Food</a></li>
+    <li><a href="About.html">About</a></li>
+</ul>
+        </nav>
+        <div id="lastpage">
+            <div class="newclose" onclick="closePrint()" title="Close">+</div>
+            <div id="printarea">
+                <div class="workoutplan">
+                    <h1>Workout Plan</h1>
+                    <span><h2 id="ch"></h2></span>
+                    <h3 id="duration"></h3>
+                    <h3 id="set"></h3>
+                
+                    <h3 id="exercise"></h3>
+                
+                </div>
+                
+
+            </div>
+<button id="btn2" onclick="planprint()">Print Plan</button>
+        </div>
+ <div id="welcome">
+
+    <div id="center">
+        <h1>Hello,<span></span></h1>
+        <h1 id="show_name"><span></span></h1>
+        <h1>Welcome to <span></span></h1>
+        <h1>Your Goal<span></span></h1>
+        <a href="#projects" type="button" class="cta" onclick="myFunction5()" title="Pick yout Workout">Join</a>
+      </div>
+</div>
+
+
+        <div id="first" >
+            <!-- <h1>Welcome to the best place for all your fitness needs.</h1> -->
+            <h1>Choose your prefered workout below.</h1>
+                       
+                <div class="card" onclick="myFunction11()">
+                    <img src="Images/arms.png" style="width: 180px;height: 150px;margin-left: 60px;">
+                    <div class="container">
+                        <h1 style="padding-top: 50px;"><b>Arms and Chest</b></h1>
+                        <p>Targets your upper body and consists of pushing motions.</p>
+                    </div>
+                </div>
+                <div class="card2" onclick="myFunction12()">
+                    <img src="Images/ab.PNG"style="width: 200px;height: 200px;margin-left: 60px;">
+                    <div class="container">
+                        <h1 style="padding-top: 0;"><b>Abs</b></h1>
+                        <p>This targets your abodominal muscles along with your core prepare for the burn.</p>
+                    </div>
+                </div>
+                <div class="card2" onclick="myFunction13()">
+                    <img src="Images/legs.PNG "style="width: 200px;height: 200px;margin-left: 60px;">
+                    <div class="container">
+                        <h1 style="padding-top: 0;"><b>Legs</b></h1>
+                        <p>Your lower body, let get those legs moving.</p>
+                    </div>
+                </div>
+                
+            
+                </div>
+
+                <div id="second">
+                    <h1>Choose your prefered duration below.</h1>
+                       
+                    <div class="card" onclick="myFunction21()">
+                        <img src="./Images/cal1.PNG" style="height: 200px;width: 200px;margin-left: 50px;"> 
+                        <div class="container">
+                            <h1><b>Short</b></h1>
+                            <p>2 weeks max.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction22()">
+                        <img src="./Images/cal2.PNG" style="height: 200px;width: 200px;margin-left: 50px;">
+                        <div class="container">
+                            <h1><b>Medium</b></h1>
+                            <p>Under 4 Months.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction23()">
+                        <img src="./Images/call3.PNG" style="height: 200px;width: 200px;margin-left: 50px;">
+                        <div class="container">
+                            <h1><b>Long</b></h1>
+                            <p>Over 6 Months</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div id= "third" style > 
+
+                    <h1>Choose your skill level below.</h1>
+                       
+                    <div class="card" onclick="myFunction31()">
+                        <img src="./Images/begin.PNG" style="margin-left: 15px;">
+                        <div class="container">
+                            <h1><b>Beginner</b></h1>
+                            <p>This is your first time workoing out.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction32()">
+                        <img src="./Images/inter.PNG">
+                        <div class="container">
+                            <h1><b>Intermidate</b></h1>
+                            <p>You have been working out from time to time.</p>
+                        </div>
+                    </div>
+                    <div class="card2" onclick="myFunction33()">
+                        <img src="./Images/exp.PNG" style="margin-left: 35px;">
+                        <div class="container">
+                            <h1><b>Expert</b></h1>
+                            <p>You are fully expeirenced and would like to challenge yourslef.</p>
+                        </div>
+                    </div>
+                </div>
+                
+       
+    </body>
+</html>
+<script>
+    // document.getElementById("show_name").innerHTML=oName;
+    document.getElementById("show_name").innerHTML=localStorage.getItem("textvalue");
+
+</script>
